@@ -7,4 +7,4 @@ def bin_generator(bin , round):
     req = requests.post(url , cookies=cookie , headers=header,data=payload).text
     data = json.loads(req)
     for i in data['data']:
-        open("bin_generatedby@ALLTYPECC.txt","a").write(str(i['card_number']) + "|" + str(i['expiration_date']) + '|' + str(i['cvv']) + "\n")
+        open("bin_generatedby@STD_DEEPANSHU.txt","a").write(str(i['card_number']) + "|" + str(i['expiration_date']) + '|' + str(i['cvv']) + "\n")
