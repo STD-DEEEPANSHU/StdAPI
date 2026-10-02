@@ -5,7 +5,7 @@ from typing import Optional, Dict, Any
 from .exceptions import StdAPIError, ConnectionError, RateLimitError
 from .results import Result
 
-DEFAULT_BASE_URL = os.getenv("STDAPI_BASE_URL", "https://stdapivercel.vercel.app")
+DEFAULT_BASE_URL = os.getenv("STDAPI_BASE_URL", "https://stdapi.vercel.app")
 
 
 class StdAPIClient:
