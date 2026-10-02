@@ -5,7 +5,7 @@ from typing import Optional, Dict, Any
 from .exceptions import StdAPIError, ConnectionError, RateLimitError
 from .results import Result
 
-DEFAULT_BASE_URL = "https://stdapibackend-a29fecc9ce50.herokuapp.com"
+DEFAULT_BASE_URL = os.getenv("STDAPI_BASE_URL", "https://stdapivercel.vercel.app")
 
 
 class StdAPIClient:
