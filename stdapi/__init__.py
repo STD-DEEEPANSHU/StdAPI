@@ -55,6 +55,7 @@ from .media import MediaModule
 from .tools import ToolsModule
 from .ai import AIModule
 from .agent import AgentModule, StdAgent
+from .nsfw import NSFWModule
 from .results import Result
 from .exceptions import StdAPIError, ConnectionError, RateLimitError
 
@@ -63,6 +64,7 @@ media = MediaModule(_default_client)
 tools = ToolsModule(_default_client)
 ai = AIModule(_default_client)
 agent = AgentModule(_default_client)
+nsfw = NSFWModule(_default_client)
 
 __all__ = [
     "StdEngine",
@@ -71,6 +73,7 @@ __all__ = [
     "ToolsModule",
     "AIModule",
     "AgentModule",
+    "NSFWModule",
     "StdAgent",
     "Result",
     "StdAPIError",
@@ -80,6 +83,7 @@ __all__ = [
     "tools",
     "ai",
     "agent",
+    "nsfw",
     "find_extractor",
     "StealthSession",
     "FFmpegPipeline",
