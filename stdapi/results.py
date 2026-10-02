@@ -28,3 +28,7 @@ class Result(dict):
             del self[name]
         except KeyError:
             raise AttributeError(f"'Result' object has no attribute '{name}'")
+
+    def to_dict(self) -> Dict[str, Any]:
+        """Convert Result object to standard Python dictionary."""
+        return {k: (v.to_dict() if isinstance(v, Result) else v) for k, v in self.items()}

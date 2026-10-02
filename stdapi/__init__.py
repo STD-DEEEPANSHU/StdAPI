@@ -59,6 +59,9 @@ from .nsfw import NSFWModule
 from .results import Result
 from .exceptions import StdAPIError, ConnectionError, RateLimitError
 
+# Developer-friendly alias: from stdapi import StdAPI
+StdAPI = StdAPIClient
+
 _default_client = StdAPIClient()
 media = MediaModule(_default_client)
 tools = ToolsModule(_default_client)
@@ -68,6 +71,7 @@ nsfw = NSFWModule(_default_client)
 
 __all__ = [
     "StdEngine",
+    "StdAPI",
     "StdAPIClient",
     "MediaModule",
     "ToolsModule",

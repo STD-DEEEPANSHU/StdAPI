@@ -14,10 +14,12 @@ class StdAPIClient:
     """
     def __init__(
         self,
+        api_key: Optional[str] = None,
         base_url: Optional[str] = None,
         timeout: int = 25,
         session: Optional[aiohttp.ClientSession] = None
     ):
+        self.api_key = api_key or os.getenv("STDAPI_KEY") or os.getenv("STDAPI_API_KEY")
         self.base_url = (
             base_url
             or os.getenv("STDAPI_BASE_URL")
@@ -38,11 +40,38 @@ class StdAPIClient:
             return self._custom_session
         if self._session is None or self._session.closed:
             headers = {
-                "User-Agent": "StdAPI-Python-SDK/1.0.1",
+                "User-Agent": "StdAPI-Python-SDK/2.1.0",
                 "Accept": "application/json"
             }
+            if self.api_key:
+                headers["x-api-key"] = self.api_key
             self._session = aiohttp.ClientSession(headers=headers, timeout=self.timeout)
         return self._session
+
+    @property
+    def media(self):
+        from .media import MediaModule
+        return MediaModule(self)
+
+    @property
+    def nsfw(self):
+        from .nsfw import NSFWModule
+        return NSFWModule(self)
+
+    @property
+    def tools(self):
+        from .tools import ToolsModule
+        return ToolsModule(self)
+
+    @property
+    def ai(self):
+        from .ai import AIModule
+        return AIModule(self)
+
+    @property
+    def agent(self):
+        from .agent import AgentModule
+        return AgentModule(self)
 
     async def close(self):
         if self._session and not self._session.closed:
