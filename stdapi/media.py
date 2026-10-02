@@ -11,9 +11,19 @@ class MediaModule:
         """Extract metadata (title, thumbnail, duration, uploader) from media URL."""
         return await self.client._request("GET", "/v1/media/analyze", params={"url": url})
 
-    async def download(self, url: str, format: str = "mp4") -> Result:
-        """Get direct high-speed download link for video (mp4) or audio (mp3)."""
-        return await self.client._request("GET", "/v1/media/download", params={"url": url})
+    async def download(self, url: str, format: str = "mp4", mode: Optional[str] = None) -> Result:
+        """
+        Get direct high-speed download link for video (mp4) or audio (mp3).
+        Works seamlessly in Telegram Music Bots, Discord Bots, and Python apps.
+        Returns:
+            Result object with .download_url, .file_id (for Telegram bots), .title, .duration, .formats, etc.
+        """
+        effective_mode = mode or ("audio" if format.lower() in ("mp3", "audio", "m4a") else "video")
+        return await self.client._request(
+            "GET", 
+            "/v1/media/download", 
+            params={"url": url, "format": format, "mode": effective_mode}
+        )
 
     async def get_buffer(self, url: str, format: str = "mp4") -> BytesIO:
         """
