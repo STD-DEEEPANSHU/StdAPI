@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stdapi"
+version = "2.2.0"
+description = "Universal media downloader engine, developer utility API, and Telegram bot toolkit."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "LGPL-3.0-or-later" }
+
+authors = [
+  { name = "STD-DEEPANSHU", email = "stddeepanshu@aol.com" }
+]
+
+maintainers = [
+  { name = "STD-DEEPANSHU", email = "stddeepanshu@aol.com" }
+]
+
+keywords = [
+  "stdapi",
+  "media-downloader",
+  "telegram-bot",
+  "yt-dlp",
+  "safone",
+  "video-downloader",
+  "audio-downloader",
+  "ffmpeg",
+  "mcp-server",
+  "tools",
+  "automation"
+]
+
+dependencies = [
+  "aiohttp>=3.9.0",
+  "requests>=2.31.0",
+  "yt-dlp>=2024.03.10",
+  "rich>=13.7.0"
+]
+
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Multimedia :: Video",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Communications :: Chat"
+]
+
+[project.scripts]
+stdapi = "stdapi.ui.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/STD-DEEPANSHU/StdAPI"
+Documentation = "https://github.com/STD-DEEPANSHU/StdAPI#readme"
+Tracker = "https://github.com/STD-DEEPANSHU/StdAPI/issues"
+Repository = "https://github.com/STD-DEEPANSHU/StdAPI.git"

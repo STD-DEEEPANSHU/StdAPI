@@ -1,0 +1,47 @@
+# StdAPI Legal Notice & Mandatory Attribution Terms
+# Under GNU Lesser General Public License v3.0 (LGPLv3)
+
+Copyright (C) 2024-2026 STD-DEEPANSHU <stddeepanshu@aol.com> and StdAPI Contributors.
+All rights reserved.
+
+===============================================================================
+1. UPSTREAM ATTRIBUTION & ACKNOWLEDGEMENTS
+===============================================================================
+StdAPI is a high-performance media engine, developer utility API, and Telegram 
+bot toolkit built with deep respect and appreciation for foundational open-source 
+engineering across the Python developer ecosystem:
+  - yt-dlp: Outstanding universal media extraction architecture
+  - SafoneAPI: Pioneering multi-functional utility API architecture for Telegram bots
+  - FastAPI / Starlette: Asynchronous API engine standards
+  - aiohttp: High-performance asynchronous HTTP networking
+
+All respective upstream copyrights, trademarks, and contributions are preserved 
+in full faith.
+
+===============================================================================
+2. SECTION 7 ADDITIONAL TERMS: MANDATORY PROMINENT ATTRIBUTION
+===============================================================================
+In accordance with Section 7 of the GNU General Public License v3.0 and the 
+GNU Lesser General Public License v3.0, the following additional permissions and 
+requirements apply to all distributions, forks, derivative works, and deployments 
+of StdAPI:
+
+1. PROMINENT AUTHOR DISPLAY:
+   Any distribution of the Work or derivative works thereof must retain and 
+   prominently display the following credit notice in user-facing documentation, 
+   README files, package metadata, and interactive command interfaces:
+   
+     "Engineered by STD-DEEPANSHU under TeamStdNetwork"
+     "Repository: https://github.com/STD-DEEPANSHU/StdAPI"
+
+2. PRESERVATION OF INTEGRITY:
+   No downstream modifier or distributor may remove, alter, or obscure author 
+   credits, licensing banners, or headers present in any source code file.
+
+===============================================================================
+3. CONTACT & UPSTREAM REPOSITORY
+===============================================================================
+  Author:       STD DEEPANSHU
+  Email:        stddeepanshu@aol.com
+  GitHub:       https://github.com/STD-DEEPANSHU/StdAPI
+  PyPI Package: https://pypi.org/project/stdapi/
