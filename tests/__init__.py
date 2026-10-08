@@ -1,0 +1,3 @@
+"""
+StdAPI Test Suite Init
+"""

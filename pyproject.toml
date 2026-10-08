@@ -4,18 +4,19 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "stdapi"
-version = "2.2.0"
-description = "Universal media downloader engine, developer utility API, and Telegram bot toolkit."
+version = "2.3.0"
+description = "The unified open-source API platform for AI, media, search, and automation, built to power developers, bots, and real-world applications at scale."
 readme = "README.md"
 requires-python = ">=3.9"
-license = { text = "LGPL-3.0-or-later" }
+license = "LGPL-3.0-or-later"
 
 authors = [
   { name = "STD-DEEPANSHU", email = "stddeepanshu@aol.com" }
 ]
 
 maintainers = [
-  { name = "STD-DEEPANSHU", email = "stddeepanshu@aol.com" }
+  { name = "STD-DEEPANSHU", email = "stddeepanshu@aol.com" },
+  { name = "TeamStdNetwork", email = "stddeepanshu@aol.com" }
 ]
 
 keywords = [
@@ -23,12 +24,16 @@ keywords = [
   "media-downloader",
   "telegram-bot",
   "yt-dlp",
-  "safone",
-  "video-downloader",
-  "audio-downloader",
-  "ffmpeg",
+  "ai-agents",
   "mcp-server",
-  "tools",
+  "model-context-protocol",
+  "music-bot",
+  "video-downloader",
+  "content-moderation",
+  "nsfw-detector",
+  "temp-mail",
+  "search-engine",
+  "ffmpeg",
   "automation"
 ]
 
@@ -42,7 +47,6 @@ dependencies = [
 classifiers = [
   "Development Status :: 5 - Production/Stable",
   "Intended Audience :: Developers",
-  "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
@@ -51,8 +55,22 @@ classifiers = [
   "Programming Language :: Python :: 3.13",
   "Programming Language :: Python :: 3.14",
   "Topic :: Multimedia :: Video",
+  "Topic :: Multimedia :: Sound/Audio",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
   "Topic :: Software Development :: Libraries :: Python Modules",
-  "Topic :: Communications :: Chat"
+  "Topic :: Communications :: Chat",
+  "Topic :: Internet :: WWW/HTTP"
+]
+
+[project.optional-dependencies]
+cookies = ["browser-cookie3>=0.19.0"]
+fastapi = ["fastapi>=0.110.0", "uvicorn>=0.28.0"]
+all = [
+  "browser-cookie3>=0.19.0",
+  "fastapi>=0.110.0",
+  "uvicorn>=0.28.0",
+  "qrcode>=7.4.2",
+  "Pillow>=10.0.0"
 ]
 
 [project.scripts]
@@ -63,3 +81,6 @@ Homepage = "https://github.com/STD-DEEPANSHU/StdAPI"
 Documentation = "https://github.com/STD-DEEPANSHU/StdAPI#readme"
 Tracker = "https://github.com/STD-DEEPANSHU/StdAPI/issues"
 Repository = "https://github.com/STD-DEEPANSHU/StdAPI.git"
+
+[tool.setuptools.package-data]
+stdapi = ["py.typed"]
